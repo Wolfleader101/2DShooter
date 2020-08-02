@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2.62
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -199,12 +199,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1054528331}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &614407443
 GameObject:
@@ -246,10 +246,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1054528331}
   - component: {fileID: 1054528330}
-  - component: {fileID: 1054528332}
   - component: {fileID: 1054528333}
   - component: {fileID: 1054528334}
   - component: {fileID: 1054528335}
+  - component: {fileID: 1054528332}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -321,8 +321,9 @@ Transform:
   m_Children:
   - {fileID: 1423898851}
   - {fileID: 614407444}
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1054528332
 Rigidbody2D:
@@ -344,7 +345,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &1054528333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +471,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1953901055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7917718952576844265, guid: ed0eee3dd4c0ea243b8968b333d7810a, type: 3}
+  m_PrefabInstance: {fileID: 5193980190571925339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1953901056
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953901055}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &5193980190571925339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -481,6 +508,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1054528331}
+    - target: {fileID: -1801369191471865823, guid: ed0eee3dd4c0ea243b8968b333d7810a, type: 3}
+      propertyPath: MinDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5437628893012428050, guid: ed0eee3dd4c0ea243b8968b333d7810a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.53
@@ -511,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5437628893012428050, guid: ed0eee3dd4c0ea243b8968b333d7810a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437628893012428050, guid: ed0eee3dd4c0ea243b8968b333d7810a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -529,5 +560,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4089922805907227008, guid: ed0eee3dd4c0ea243b8968b333d7810a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ed0eee3dd4c0ea243b8968b333d7810a, type: 3}
