@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bullet;
+    public float BulletYOffset;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +19,8 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bullet, firePoint.position, firePoint.rotation);
+        Vector3 pos = firePoint.position;
+        pos.y += BulletYOffset;
+        Instantiate(bullet, pos, firePoint.rotation);
     }
 }

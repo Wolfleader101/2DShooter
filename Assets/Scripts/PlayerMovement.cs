@@ -28,12 +28,19 @@ public class PlayerMovement : MonoBehaviour
         Vector2 movement = new Vector2 (x, y);
 
         //Use the Ridgidbody2d component to move the player in the direction of "movement" multiplied by "speed". Remember to set speed in the inspector.
-        rb.velocity = (movement * speed);
+       // rb.AddForce(movement * speed, ForceMode2D.Impulse);
+       rb.velocity = (movement * speed);
+
 
         //Set the player's rotation to face the mouse cursor.
         Vector3 mouseScreen = Input.mousePosition;
         Vector3 mouse = Camera.main.ScreenToWorldPoint(mouseScreen);
-        transform.LookAt(mouse, Vector3.forward);
+        Vector3 rot = transform.eulerAngles;
+        float angleZ =  Mathf.Atan2(mouse.y - transform.position.y, mouse.x - transform.position.x) * Mathf.Rad2Deg - 90;
+        rot.z = angleZ;
+        transform.eulerAngles = rot;
+        // Vector3 mouseScreen = Input.mousePosition;
+        // Vector3 mouse = Camera.main.ScreenToWorldPoint(mouseScreen);
         //transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mouse.y - transform.position.y, mouse.x - transform.position.x) * Mathf.Rad2Deg - 90);
 
 
