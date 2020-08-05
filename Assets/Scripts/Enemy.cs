@@ -11,7 +11,7 @@ public class Enemy : BaseEntity
     public int targetDistance = 2; 
     public int outOfRange = 8;
     public int damage;
-
+    public HealthBar HealthBar;
 
 
    protected override void Die()
@@ -23,6 +23,13 @@ public class Enemy : BaseEntity
     void Start()
     {
         currentHealth = maxHealth;
+        HealthBar.setMaxHealth(maxHealth);
+    }
+    
+    public override void TakeDamage(int damage)
+    {
+        base.TakeDamage(damage);
+        HealthBar.SetHealth(currentHealth);
     }
 
     // Update is called once per frame
