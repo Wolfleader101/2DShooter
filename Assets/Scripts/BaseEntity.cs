@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class BaseEntity : MonoBehaviour
@@ -7,7 +8,7 @@ public class BaseEntity : MonoBehaviour
     public int health = 100;
     public float speed = 10;
     //  public GameObject deathEffect;
-    //  public GameObject damageEffect;
+    public GameObject damageEffect;
     
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class BaseEntity : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        Instantiate(damageEffect, transform.position, quaternion.identity);
         health -= damage;
         if (health <= 0)
         {
