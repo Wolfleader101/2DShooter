@@ -148,8 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   speed: 10
-  damageEffect: {fileID: 0}
+  damageEffect: {fileID: 3716364218025122657, guid: 577a4b7b89f46fe41928a3f10c433bb9, type: 3}
   player: {fileID: 0}
-  targetDistance: 2
-  outOfRange: 8
+  targetDistance: 10
+  outOfRange: 15
   damage: 0

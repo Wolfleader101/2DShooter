@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1767957568629377773}
-  bullet: {fileID: 2004790527847191533, guid: 9cce7dcbd3699f545a11f37f67a5b38e, type: 3}
+  bullet: {fileID: 1433494113618684869, guid: ad806d19eb499d24189f11aeb611122a, type: 3}
   BulletYOffset: 0.1
 --- !u!50 &1767957568801195189
 Rigidbody2D:

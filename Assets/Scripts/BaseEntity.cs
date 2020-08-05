@@ -5,15 +5,17 @@ using UnityEngine;
 
 public class BaseEntity : MonoBehaviour
 {
-    public int health = 100;
+    public int maxHealth = 100;
+    public int currentHealth;
     public float speed = 10;
+    
     //  public GameObject deatheffectSprite;
     public GameObject damageEffect;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -21,12 +23,13 @@ public class BaseEntity : MonoBehaviour
     {
         
     }
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         GameObject effect = Instantiate(damageEffect, transform.position, quaternion.identity);
-        health -= damage;
         
-        if (health <= 0)
+        currentHealth -= damage;
+        
+        if (currentHealth <= 0)
         {
             Die();
         }
