@@ -48,7 +48,11 @@ public class Enemy : BaseEntity
        Collider2D hitInfo = col.collider; 
        
        Player hitPlayer = hitInfo.GetComponent<Player>();
-       if(hitPlayer != null) hitPlayer.TakeDamage(damage);
-       Destroy(gameObject);
+       if (hitPlayer != null)
+       {
+           hitPlayer.TakeDamage(damage);
+           Destroy(gameObject);
+       }
+       
     }
 }
