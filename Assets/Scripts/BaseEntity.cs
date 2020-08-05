@@ -7,9 +7,9 @@ public class BaseEntity : MonoBehaviour
 {
     public int health = 100;
     public float speed = 10;
-    //  public GameObject deathEffect;
+    //  public GameObject deatheffectSprite;
     public GameObject damageEffect;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,15 +23,17 @@ public class BaseEntity : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        Instantiate(damageEffect, transform.position, quaternion.identity);
+        GameObject effect = Instantiate(damageEffect, transform.position, quaternion.identity);
         health -= damage;
+        
         if (health <= 0)
         {
             Die();
         }
     }
+    
     protected virtual void Die()
     {
-        //Instantiate(deathEffect, transform.position, quaternion.identity);
+        //Instantiate(deatheffectSprite, transform.position, quaternion.identity);
     }
 }
