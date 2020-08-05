@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject bullet;
+    public Bullet bulletPrefab;
     public float BulletYOffset;
 
     // Update is called once per frame
@@ -21,6 +21,8 @@ public class Weapon : MonoBehaviour
     {
         Vector3 pos = firePoint.position;
         pos.y += BulletYOffset;
-        Instantiate(bullet, pos, firePoint.rotation);
+        Bullet newBullet = Instantiate(bulletPrefab, pos, firePoint.rotation);
+        Player player = this.GetComponent<Player>();
+        newBullet.player = player;
     }
 }

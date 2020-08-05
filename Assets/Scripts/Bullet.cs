@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Bullet : MonoBehaviour
 
     public Rigidbody2D rb;
     public int damage = 30;
+
+    public Player player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +22,14 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if(enemy != null) enemy.TakeDamage(damage);
+        if (enemy != null)
+        {
+            enemy.TakeDamage(damage);
+            player.currentScore += player.scoreIncrement;
+            player.score.setScore(player.currentScore);
+            
+        }
         Destroy(gameObject);
+        
     }
 }

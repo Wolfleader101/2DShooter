@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Player : BaseEntity
 {
     public HealthBar HealthBar;
+
+    public Score score;
+    public int currentScore;
+    public int scoreIncrement = 100;
+
     // Start is called before the first frame update
     void Start()
     {
