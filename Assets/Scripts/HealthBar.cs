@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
     public Text text;
+    public TextMesh textMesh;
 
     public void setMaxHealth(int health)
     {
