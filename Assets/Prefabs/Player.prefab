@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1767957568629377773}
-  bullet: {fileID: 1433494113618684869, guid: ad806d19eb499d24189f11aeb611122a, type: 3}
+  bulletPrefab: {fileID: 3161849604755602121, guid: ad806d19eb499d24189f11aeb611122a, type: 3}
   BulletYOffset: 0.1
 --- !u!50 &1767957568801195189
 Rigidbody2D:
@@ -201,6 +201,9 @@ MonoBehaviour:
   speed: 10
   damageEffect: {fileID: 3716364218025122657, guid: 577a4b7b89f46fe41928a3f10c433bb9, type: 3}
   HealthBar: {fileID: 0}
+  score: {fileID: 0}
+  currentScore: 0
+  scoreIncrement: 100
 --- !u!1 &1767957569439002395
 GameObject:
   m_ObjectHideFlags: 0
