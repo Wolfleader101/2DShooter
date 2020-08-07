@@ -1106,6 +1106,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4569036387248440569, guid: 13d1a55bb146cdc48903af703097247b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -240.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569036387248440569, guid: 13d1a55bb146cdc48903af703097247b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -493.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776336649932695937, guid: 13d1a55bb146cdc48903af703097247b, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776336649932695937, guid: 13d1a55bb146cdc48903af703097247b, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776336649932695937, guid: 13d1a55bb146cdc48903af703097247b, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776336649932695937, guid: 13d1a55bb146cdc48903af703097247b, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4776336650739317674, guid: 13d1a55bb146cdc48903af703097247b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
