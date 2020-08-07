@@ -15,8 +15,7 @@ public class Ammo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+                
     }
     
     public void setMaxAmmo(int ammo)

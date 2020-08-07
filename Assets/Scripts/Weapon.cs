@@ -12,6 +12,8 @@ public class Weapon : MonoBehaviour
     public Ammo ammo;
     public int maxAmmo = 10;
     public int currentAmmo = 0;
+    private bool canReload = false;
+    public float reloadTime = 1.2f;
 
     private void Start()
     {
@@ -25,14 +27,29 @@ public class Weapon : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             currentAmmo--;
+            canReload = true;
             if (currentAmmo >= 0)
             {
                 ammo.setAmmo(currentAmmo);
                 Shoot();
             }
         }
+        
+        if(currentAmmo == maxAmmo) canReload = false;
+
+        if (Input.GetKeyDown ("r") && canReload == true) {
+            StartCoroutine( Reload(reloadTime) );
+        }
     } 
 
+    IEnumerator Reload(float time) {
+        canReload = false;
+
+        yield return new WaitForSeconds(time);
+        currentAmmo = maxAmmo;
+        ammo.setAmmo(currentAmmo);
+        canReload = true;
+    }
     void Shoot()
     {
         Vector3 pos = firePoint.position;
