@@ -163,6 +163,9 @@ MonoBehaviour:
   firePoint: {fileID: 1767957568629377773}
   bulletPrefab: {fileID: 3161849604755602121, guid: ad806d19eb499d24189f11aeb611122a, type: 3}
   BulletYOffset: 0.1
+  ammo: {fileID: 0}
+  maxAmmo: 10
+  currentAmmo: 0
 --- !u!50 &1767957568801195189
 Rigidbody2D:
   serializedVersion: 4
