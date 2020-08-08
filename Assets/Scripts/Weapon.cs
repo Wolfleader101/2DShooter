@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -14,11 +15,16 @@ public class Weapon : MonoBehaviour
     public int currentAmmo = 0;
 
     public Reload reloadPrefab;
-    private bool canReload = false;
     public float reloadTime = 1.2f;
+
+    private bool canShoot;
+    private bool canReload = false;
+    
+    public Canvas canvas;
 
     private void Start()
     {
+        canShoot = true;
         currentAmmo = maxAmmo;
         ammo.setMaxAmmo(maxAmmo);
     }
@@ -26,7 +32,8 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        canvas.transform.rotation = Quaternion.identity;
+        if (Input.GetButtonDown("Fire1") && canShoot)
         {
             currentAmmo--;
             canReload = true;
@@ -45,14 +52,17 @@ public class Weapon : MonoBehaviour
     } 
 
     IEnumerator Reload(float time) {
+        
         canReload = false;
+        canShoot = false;
         Reload newReload = Instantiate(reloadPrefab, transform.position, transform.rotation);
-        newReload.parent = this.GetComponentInChildren<Canvas>();
+        newReload.parent = canvas;
         newReload.timeAmount = reloadTime;
         
         yield return new WaitForSeconds(time);
         currentAmmo = maxAmmo;
         ammo.setAmmo(currentAmmo);
+        canShoot = true;
         canReload = true;
     }
     void Shoot()

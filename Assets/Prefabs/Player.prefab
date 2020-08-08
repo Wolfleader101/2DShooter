@@ -56,7 +56,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -207804415
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &972048532829243672
@@ -267,6 +267,7 @@ MonoBehaviour:
   currentAmmo: 0
   reloadPrefab: {fileID: 774655490465304987, guid: 0930d1dc58223aa4b84adbf3ade64a54, type: 3}
   reloadTime: 1.2
+  canvas: {fileID: 3802238352510883422}
 --- !u!50 &1767957568801195189
 Rigidbody2D:
   serializedVersion: 4
