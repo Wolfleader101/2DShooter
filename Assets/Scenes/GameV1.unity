@@ -1054,18 +1054,6 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 1291612338}
-    - target: {fileID: 275852024663145248, guid: 1ed28422ffbff2e48a82eec1e94ccbb3, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 275852024663145248, guid: 1ed28422ffbff2e48a82eec1e94ccbb3, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -207804415
-      objectReference: {fileID: 0}
-    - target: {fileID: 1659315205961465019, guid: 1ed28422ffbff2e48a82eec1e94ccbb3, type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1767957568801195184, guid: 1ed28422ffbff2e48a82eec1e94ccbb3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1118,14 +1106,10 @@ PrefabInstance:
       propertyPath: ammo
       value: 
       objectReference: {fileID: 4776336650319390258}
-    - target: {fileID: 4821043529331815003, guid: 1ed28422ffbff2e48a82eec1e94ccbb3, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -207804415
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202459053395636391, guid: 1ed28422ffbff2e48a82eec1e94ccbb3, type: 3}
-      propertyPath: reloadProgress
-      value: 0.774
-      objectReference: {fileID: 0}
+    - target: {fileID: 1767957568801195190, guid: 1ed28422ffbff2e48a82eec1e94ccbb3, type: 3}
+      propertyPath: reloadPrefab
+      value: 
+      objectReference: {fileID: 774655490465304987, guid: 0930d1dc58223aa4b84adbf3ade64a54, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ed28422ffbff2e48a82eec1e94ccbb3, type: 3}
 --- !u!1001 &3923562098549380115

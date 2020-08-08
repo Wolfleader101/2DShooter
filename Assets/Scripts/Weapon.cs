@@ -12,6 +12,8 @@ public class Weapon : MonoBehaviour
     public Ammo ammo;
     public int maxAmmo = 10;
     public int currentAmmo = 0;
+
+    public Reload reloadPrefab;
     private bool canReload = false;
     public float reloadTime = 1.2f;
 
@@ -44,7 +46,10 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Reload(float time) {
         canReload = false;
-
+        Reload newReload = Instantiate(reloadPrefab, transform.position, transform.rotation);
+        newReload.parent = this.GetComponentInChildren<Canvas>();
+        newReload.timeAmount = reloadTime;
+        
         yield return new WaitForSeconds(time);
         currentAmmo = maxAmmo;
         ammo.setAmmo(currentAmmo);
